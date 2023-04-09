@@ -1,0 +1,51 @@
+
+
+plugins {
+    id 'application'
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:19.0.2.1'
+    implementation 'org.openjfx:javafx-graphics:19.0.2.1'
+    implementation 'org.openjfx:javafx-base:19.0.2.1'
+    implementation 'org.openjfx:javafx-fxml:19.0.2.1'
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "19.0.2.1"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.base', 'javafx.graphics' ]
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.App'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+
+    }
+}
+
+run {
+    jvmArgs = ['--module-path', 'lib', '--add-modules', 'javafx.controls,javafx.fxml,javafx.graphics,javafx.base']
+}
+
+
+mainClassName = 'org.example.App'
+
