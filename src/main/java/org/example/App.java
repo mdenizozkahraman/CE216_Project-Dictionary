@@ -30,8 +30,7 @@ import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
 
-//deneme deneme deneme
-//aaaa
+
 public class App extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -49,7 +48,7 @@ public class App extends Application {
         firstLine.setAlignment(Pos.CENTER);
         secondLine.setAlignment(Pos.CENTER_LEFT);
 
-//ben ceren
+
         Label label = new Label("Word: ");
         Label label1 = new Label("Select: ");
 

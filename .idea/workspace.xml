@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ca407f1-d365-4db8-97bd-d2d3fca692e9" name="Changes" comment="deneme12">
+    <list default="true" id="3ca407f1-d365-4db8-97bd-d2d3fca692e9" name="Changes" comment="denedim bakın">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683397304822</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="denedim bakın">
+      <created>1683399357976</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683399357976</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,11 +247,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last updt" />
     <MESSAGE value="add method new window" />
     <MESSAGE value="deneme12" />
-    <option name="LAST_COMMIT_MESSAGE" value="deneme12" />
+    <MESSAGE value="denedim bakın" />
+    <option name="LAST_COMMIT_MESSAGE" value="denedim bakın" />
   </component>
 </project>
