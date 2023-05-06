@@ -228,7 +228,7 @@ public class App extends Application {
 
         Scene scene = new Scene(layout, 200, 300);
         Stage newStage = new Stage();
-        newStage.setTitle("adding words");
+        newStage.setTitle("word adder");
         newStage.setScene(scene);
         newStage.show();
 
