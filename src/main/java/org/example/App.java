@@ -31,7 +31,7 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 
 //deneme deneme deneme
-//aaaa
+
 public class App extends Application {
     public static void main(String[] args) {
         launch(args);
@@ -135,6 +135,8 @@ public class App extends Application {
 //            }
 //        });
 
+        buttonAdd.setOnAction(e -> addGUI());
+
 
 
         Menu h = new Menu("Help");
@@ -174,13 +176,13 @@ public class App extends Application {
         HBox Line7 = new HBox(8);
         HBox Line9 = new HBox(8);
 
-        Label label1 = new Label("deu ");
-        Label label2 = new Label("fra  ");
-        Label label3 = new Label("eng ");
-        Label label4 = new Label("swe ");
-        Label label5 = new Label("tr    ");
-        Label label6 = new Label("gre ");
-        Label label7 = new Label("ita  ");
+        Label label1 = new Label("French: ");
+        Label label2 = new Label("German:  ");
+        Label label3 = new Label("Modern Greek: ");
+        Label label4 = new Label("English: ");
+        Label label5 = new Label("Italien:   ");
+        Label label6 = new Label("Swedish: ");
+        Label label7 = new Label("Turkish:  ");
 
 
         Button OK = new Button("OK");
@@ -202,6 +204,24 @@ public class App extends Application {
         TextField txtInfo5 = new TextField();
         TextField txtInfo6 = new TextField();
         TextField txtInfo7 = new TextField();
+
+
+        OK.setOnAction(new EventHandler<>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+
+                String[] addedWords = {
+                        txtInfo1.getText(),
+                        txtInfo2.getText(),
+                        txtInfo3.getText(),
+                        txtInfo4.getText(),
+                        txtInfo5.getText(),
+                        txtInfo6.getText(),
+                        txtInfo7.getText(),};
+
+                FileProcess.addWord(addedWords);
+            }
+        });
 
 
         HBox.setHgrow(txtInfo1, Priority.ALWAYS);
@@ -226,7 +246,7 @@ public class App extends Application {
 
         layout.getChildren().addAll(Line1,Line2,Line3,Line4,Line5,Line6,Line7,Line9);
 
-        Scene scene = new Scene(layout, 200, 300);
+        Scene scene = new Scene(layout, 300, 300);
         Stage newStage = new Stage();
         newStage.setTitle("adding words");
         newStage.setScene(scene);
@@ -235,4 +255,3 @@ public class App extends Application {
     }
 
 }
-
