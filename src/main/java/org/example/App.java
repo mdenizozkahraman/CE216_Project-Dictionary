@@ -49,7 +49,7 @@ public class App extends Application {
         firstLine.setAlignment(Pos.CENTER);
         secondLine.setAlignment(Pos.CENTER_LEFT);
 
-
+//ben ceren
         Label label = new Label("Word: ");
         Label label1 = new Label("Select: ");
 
