@@ -71,26 +71,15 @@ public class FileProcess {
         searchWord += " /";
 
         boolean fileNotFound = false;
-        FileReader fileReader;
         BufferedReader bufferedReader;
 
         if (filePaths[lang][lang2] != null) {
-            fileReader = new FileReader(filePaths[lang][lang2]);
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePaths[lang][lang2]), StandardCharsets.UTF_8));
         }
         else {
-            fileReader = new FileReader(filePaths[lang][3]);
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePaths[lang][3]), StandardCharsets.UTF_8));
             fileNotFound = true;
         }
-
-
-
-        //BufferedReader bufferedReader = new BufferedReader(fileReader);
-
-
-
-
 
 
         String line;
@@ -104,7 +93,6 @@ public class FileProcess {
             String tempLine = "%%" + line.toLowerCase();
 
             if (tempLine.contains(searchWord.toLowerCase())) {
-                int index = line.indexOf(searchWord);
                 line = bufferedReader.readLine();
 
 
@@ -144,6 +132,19 @@ public class FileProcess {
         else
             return " ";
 
-
     }
+
+    public static void addWord(String fileName, String word) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(fileName, true);
+            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
+            writer.newLine();
+            writer.write(word);
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file: " + e.getMessage());
+        }
+    }
+
+
 }
