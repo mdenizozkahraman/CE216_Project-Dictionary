@@ -128,14 +128,12 @@ public class App extends Application {
         secondLine.getChildren().addAll(label1, subjects, buttonAdd, buttonEdit);
         mainLayout.getChildren().addAll(firstLine, secondLine,listView);
 
-//        buttonAdd.setOnAction(new EventHandler<>() {
-//            @Override
-//            public void handle(ActionEvent actionEvent) {
-//                FileProcess.addWord("dicts/deu/deneme.txt",txtInfo.getText());
-//            }
-//        });
-
-        buttonAdd.setOnAction(e -> addGUI());
+        buttonAdd.setOnAction(new EventHandler<>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                FileProcess.addWord("dicts/deu/deneme.txt",txtInfo.getText());
+            }
+        });
 
         Menu h = new Menu("Help");
         MenuItem h1 = new MenuItem("About");
@@ -159,78 +157,6 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();
 
-    }
-
-    private void addGUI() {
-
-        VBox layout = new VBox();
-
-        HBox Line1 = new HBox(8);
-        HBox Line2 = new HBox(8);
-        HBox Line3 = new HBox(8);
-        HBox Line4 = new HBox(8);
-        HBox Line5 = new HBox(8);
-        HBox Line6 = new HBox(8);
-        HBox Line7 = new HBox(8);
-        HBox Line9 = new HBox(8);
-
-        Label label1 = new Label("deu ");
-        Label label2 = new Label("fra  ");
-        Label label3 = new Label("eng ");
-        Label label4 = new Label("swe ");
-        Label label5 = new Label("tr    ");
-        Label label6 = new Label("gre ");
-        Label label7 = new Label("ita  ");
-
-
-        Button OK = new Button("OK");
-        Line9.setAlignment(Pos.BASELINE_RIGHT);
-
-        VBox.setMargin(Line1, new Insets(3));
-        VBox.setMargin(Line2, new Insets(3));
-        VBox.setMargin(Line3, new Insets(3));
-        VBox.setMargin(Line4, new Insets(3));
-        VBox.setMargin(Line5, new Insets(3));
-        VBox.setMargin(Line6, new Insets(3));
-        VBox.setMargin(Line7, new Insets(3));
-
-
-        TextField txtInfo1 = new TextField();
-        TextField txtInfo2 = new TextField();
-        TextField txtInfo3 = new TextField();
-        TextField txtInfo4 = new TextField();
-        TextField txtInfo5 = new TextField();
-        TextField txtInfo6 = new TextField();
-        TextField txtInfo7 = new TextField();
-
-
-        HBox.setHgrow(txtInfo1, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo2, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo3, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo4, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo5, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo6, Priority.ALWAYS);
-        HBox.setHgrow(txtInfo7, Priority.ALWAYS);
-
-
-
-        Line1.getChildren().addAll(label1, txtInfo1);
-        Line2.getChildren().addAll(label2, txtInfo2);
-        Line3.getChildren().addAll(label3, txtInfo3);
-        Line4.getChildren().addAll(label4, txtInfo4);
-        Line5.getChildren().addAll(label5, txtInfo5);
-        Line6.getChildren().addAll(label6, txtInfo6);
-        Line7.getChildren().addAll(label7, txtInfo7);
-
-        Line9.getChildren().add(OK);
-
-        layout.getChildren().addAll(Line1,Line2,Line3,Line4,Line5,Line6,Line7,Line9);
-
-        Scene scene = new Scene(layout, 200, 300);
-        Stage newStage = new Stage();
-        newStage.setTitle("adding words");
-        newStage.setScene(scene);
-        newStage.show();
     }
 
 }
