@@ -7,6 +7,8 @@ public class FileProcess {
 
     public static String WordFinder(String inputWord, int lang, int lang2) throws IOException {
 
+
+
         String[][] filePaths = {
                 {null,
                         "dicts/fra/fra-deu.txt",
@@ -71,7 +73,33 @@ public class FileProcess {
         searchWord += " /";
 
         boolean fileNotFound = false;
-        BufferedReader bufferedReader;
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream("dicts/deu/deneme.txt"), StandardCharsets.UTF_8));
+
+
+        String line0;
+        int lineNumber0 = 0;
+
+        for (int i = 0; i < lang; i++){
+            bufferedReader.readLine();
+        }
+
+        while ((line0 = bufferedReader.readLine()) != null) {
+            lineNumber0++;
+            String tempLine = "%%" + line0.toLowerCase();
+
+            if (tempLine.contains(searchWord.toLowerCase())) {
+                line0 = bufferedReader.readLine();
+
+
+                return line0;
+            }
+
+            for (int i = 0; i < 7; i++){
+                bufferedReader.readLine();
+            }
+
+        }
+
 
         if (filePaths[lang][lang2] != null) {
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePaths[lang][lang2]), StandardCharsets.UTF_8));
@@ -134,13 +162,21 @@ public class FileProcess {
 
     }
 
-    public static void addWord(String fileName, String word) {
+    public static void addWord(String[] word) {
+
         try {
+            String fileName= "dicts/deu/deneme.txt";
             FileOutputStream fileOutputStream = new FileOutputStream(fileName, true);
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
+            for (int i =0; i<7; i++){
+
+                writer.write(word[i]+" /");
+                writer.newLine();
+
+            }
             writer.newLine();
-            writer.write(word);
             writer.close();
+
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
