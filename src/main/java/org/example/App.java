@@ -159,7 +159,16 @@ public class App extends Application {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("About Dictionary App");
             alert.setHeaderText("User Guide");
-            alert.setContentText("The user writes the word in the first box.After user click on the Translate button, one can see the translated words in other 6 languages. ");
+            alert.setContentText("When the user wants to see the meaning of a " +
+                    "word in other languages,the user has to type the word they want to translate into text space in \"Word: \" part. After clicking the translate button," +
+                    " the application shows the equivalents it finds for each language in the box below. If the user is searching for a word written in the same way in more than one language," +
+                    " she/he should select the language she/he wants to search in the \"Select\" section and then search for the word." +
+                    "\n If user want to add a new word to the dictionary, user must click the add button from the \"Select\" part of the word. " +
+                    "Then, in the window that appears, user should write the word he/she want to add that corresponds to language " +
+                    "and user should write the spelling of the word in other languages in a way " +
+                    " that corresponds to each language and click the  and click the OK button."+
+                    "\n The \"Edit\" button allows the user to rearrange existing words and translations in the system."+
+                    "First, click the \"Edit\" button and then add new words.");
             alert.show();
 
         });
