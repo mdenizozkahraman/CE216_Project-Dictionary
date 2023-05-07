@@ -182,13 +182,13 @@ public class App extends Application {
         HBox Line7 = new HBox(8);
         HBox Line9 = new HBox(8);
 
-        Label label1 = new Label("French:       ");
+        Label label1 = new Label("French:            ");
         Label label2 = new Label("German:           ");
         Label label3 = new Label("Modern Greek: ");
-        Label label4 = new Label("English:          ");
-        Label label5 = new Label("Italien:          ");
-        Label label6 = new Label("Swedish:          ");
-        Label label7 = new Label("Turkish:          ");
+        Label label4 = new Label("English:             ");
+        Label label5 = new Label("Italien:              ");
+        Label label6 = new Label("Swedish:            ");
+        Label label7 = new Label("Turkish:              ");
 
 
         Button OK = new Button("OK");
@@ -254,7 +254,7 @@ public class App extends Application {
 
         Scene scene = new Scene(layout, 300, 300);
         Stage newStage = new Stage();
-        newStage.setTitle("Adding Words");
+        newStage.setTitle("Word Adder");
         newStage.setScene(scene);
         newStage.show();
 
