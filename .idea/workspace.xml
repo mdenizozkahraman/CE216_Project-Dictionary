@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ca407f1-d365-4db8-97bd-d2d3fca692e9" name="Changes" comment="contentText for Help menuItem">
+    <list default="true" id="3ca407f1-d365-4db8-97bd-d2d3fca692e9" name="Changes" comment="word arrangement">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/untitled1.tar" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/untitled1.tar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/distributions/untitled1.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/untitled1.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/untitled1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/untitled1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/untitled1" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/untitled1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/scripts/untitled1.bat" beforeDir="false" afterPath="$PROJECT_DIR$/build/scripts/untitled1.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +37,16 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="untitled1" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="untitled1" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -49,6 +65,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle :run" />
@@ -56,7 +75,7 @@
       <command value="gradle run" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.CE216_Project-Dictionary [run]">
+  <component name="RunManager" selected="Gradle.CE216_Project-Dictionary [build]">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="untitled1.main" />
@@ -67,6 +86,27 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="CE216_Project-Dictionary [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="CE216_Project-Dictionary [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -152,42 +192,21 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="untitled1 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Gradle.CE216_Project-Dictionary [run]" />
       <item itemvalue="Gradle.untitled1 [jar]" />
       <item itemvalue="Gradle.untitled1 [door]" />
       <item itemvalue="Gradle.untitled1 [:run]" />
-      <item itemvalue="Gradle.untitled1 [run]" />
+      <item itemvalue="Gradle.CE216_Project-Dictionary [build]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CE216_Project-Dictionary [run]" />
+        <item itemvalue="Gradle.CE216_Project-Dictionary [build]" />
         <item itemvalue="Gradle.untitled1 [jar]" />
+        <item itemvalue="Gradle.CE216_Project-Dictionary [run]" />
         <item itemvalue="Gradle.untitled1 [door]" />
         <item itemvalue="Gradle.untitled1 [:run]" />
-        <item itemvalue="Gradle.untitled1 [run]" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683463446378</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="word arrangement">
+      <created>1683482693938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683482693938</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +297,7 @@
     <MESSAGE value="denedim bakın" />
     <MESSAGE value="deleting unnecessary part" />
     <MESSAGE value="contentText for Help menuItem" />
-    <option name="LAST_COMMIT_MESSAGE" value="contentText for Help menuItem" />
+    <MESSAGE value="word arrangement" />
+    <option name="LAST_COMMIT_MESSAGE" value="word arrangement" />
   </component>
 </project>
