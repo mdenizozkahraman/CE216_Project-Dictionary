@@ -77,8 +77,7 @@ public class FileProcess {
 
         if (filePaths[lang][lang2] != null) {
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePaths[lang][lang2]), StandardCharsets.UTF_8));
-        }
-        else {
+        } else {
             bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(filePaths[lang][3]), StandardCharsets.UTF_8));
             fileNotFound = true;
         }
@@ -96,8 +95,6 @@ public class FileProcess {
 
             if (tempLine.contains(searchWord.toLowerCase())) {
                 line = bufferedReader.readLine();
-
-
                 lineSecond = line;
                 wordFound = true;
                 break;
@@ -105,29 +102,28 @@ public class FileProcess {
 
         }
         String synonym = bufferedReader.readLine();
-        synonym = synonym.contains("2.") ? synonym.split("2.")[1]: synonym;
+        synonym = synonym.contains("2.") ? synonym.split("2.")[1] : synonym;
         bufferedReader.close();
 
         if (wordFound) {
             String tempLine = "";
             String[] rowWords = lineSecond.split(" ");
-            if (rowWords[0].equals("1.")){
-                for (int i = 0; i < rowWords.length; i++){
+            if (rowWords[0].equals("1.")) {
+                for (int i = 0; i < rowWords.length; i++) {
                     if (i == 0)
                         continue;
                     tempLine += rowWords[i];
-                    if (i != rowWords.length-1)
+                    if (i != rowWords.length - 1)
                         tempLine += " ";
                 }
                 lineSecond = tempLine + " | synonyms: " + synonym;
             }
-        }
-        else
+        } else
             return " ";
 
 
         if (fileNotFound)
-            return FileProcess.WordFinder(lineSecond.split(",")[0].split(" ")[0],3,lang2);
+            return org.example.FileProcess.WordFinder(lineSecond.split(",")[0].split(" ")[0], 3, lang2);
 
 
         if (lineSecond != null)
@@ -140,13 +136,13 @@ public class FileProcess {
 
     public static void addWord(String[] word) {
         try {
-            for (int i = 0; i < 7; i++){
-                for (int j =0; j < 7; j++){
+            for (int i = 0; i < 7; i++) {
+                for (int j = 0; j < 7; j++) {
                     if (filePaths[i][j] == null)
                         continue;
                     FileOutputStream fileOutputStream = new FileOutputStream(filePaths[i][j], true);
                     BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fileOutputStream));
-                    writer.write(word[i]+" /");
+                    writer.write(word[i] + " /");
                     writer.newLine();
 
                     writer.write(word[j]);
@@ -154,17 +150,53 @@ public class FileProcess {
                     writer.close();
                 }
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
-
     }
 
+    public static void edit(int languageindex, String[] word) {
+        for (int i = 0; i < 7; i++){
+
+            String fileName = filePaths[languageindex][i];
+
+            if (filePaths[languageindex][i] == null)
+                continue;
+
+            String textToAdd = word[languageindex] + " /";
+
+            try {
+
+                File inputFile = new File(fileName);
+                File tempFile = new File("temp.txt");
+                BufferedReader reader = new BufferedReader(new FileReader(inputFile, StandardCharsets.UTF_8));
+                BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile, StandardCharsets.UTF_8));
 
 
+                writer.write(textToAdd + System.lineSeparator());
+                reader.readLine();
+                writer.write(word[i] + System.lineSeparator());
 
 
+                String line = reader.readLine();
+                while (line != null) {
+                    writer.write(line + System.lineSeparator());
+                    line = reader.readLine();
+                }
+
+
+                reader.close();
+                writer.close();
+                if (!inputFile.delete()) {
+                    return;
+                }
+                if (!tempFile.renameTo(inputFile)) {
+                    return;
+                }
+            } catch (IOException e) {
+            }
+        }
+    }
 
 }
