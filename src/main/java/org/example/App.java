@@ -152,7 +152,7 @@ public class App extends Application {
                     " the application shows the equivalents it finds for each language in the box below. If the user is searching for a word written in the same way in more than one language," +
                     " she/he should select the language she/he wants to search in the \"Select\" section and then search for the word. If user want to add a new word to the dictionary, user must click the add button from the \"Select\" part of the word. " +
                     "Then, in the window that appears, user should write the word he/she want to add that corresponds to language " +
-                    "and user hould write the spelling of the word in other languages in a way " +
+                    "and user should write the spelling of the word in other languages in a way " +
                     " that corresponds to each language and click the  and click the OK button.");
             alert.show();
 
@@ -186,7 +186,7 @@ public class App extends Application {
         Label label2 = new Label("German:           ");
         Label label3 = new Label("Modern Greek: ");
         Label label4 = new Label("English:             ");
-        Label label5 = new Label("Italien:              ");
+        Label label5 = new Label("Italian:              ");
         Label label6 = new Label("Swedish:            ");
         Label label7 = new Label("Turkish:              ");
 
@@ -277,7 +277,7 @@ public class App extends Application {
         Label label2 = new Label("German:           ");
         Label label3 = new Label("Modern Greek: ");
         Label label4 = new Label("English:          ");
-        Label label5 = new Label("Italien:          ");
+        Label label5 = new Label("Italian:          ");
         Label label6 = new Label("Swedish:          ");
         Label label7 = new Label("Turkish:          ");
 
